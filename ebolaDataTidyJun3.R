@@ -27,10 +27,12 @@ ggplot(data = ebolaAdultEthnicity) +
   geom_bar(mapping = aes(x = DisType, fill = DisType))
 
 #add gender variable using fill aesthetic clarity
-ggplot(data = ebolaAdultEthnicity) +
+g <- ggplot(data = ebolaAdultEthnicity) +
   geom_bar(mapping = aes(x = DisType, fill = Gender))
 
-
+#add titles to data
+g + ggtitle("Dishcharge Type Following Ebola Infection (Adults)") +
+  xlab("Discharge Type") + ylab("Count of Discharge Types")
 
 
 
